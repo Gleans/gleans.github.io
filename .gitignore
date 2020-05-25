@@ -19,3 +19,12 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+假设只跟踪src，bin目录，做法如下
+#编辑.gitignore文件(vim .gitignore)
+#忽略所有文件，注意放在开头
+/*
+#除src文件夹外
+# !/src
+#除bin文件夹外
+!/docs
+#总的效果就是git只跟踪src和bin两个文件夹
